@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Malla Interactiva – Ingeniería Industrial</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>📚 Malla Interactiva – Ingeniería Industrial</h1>
+    <div class="actions">
+      <button id="btnReset" title="Borrar todo el progreso">Reiniciar</button>
+      <button id="btnExport" title="Descargar tu avance">Exportar</button>
+      <label class="importer">
+        <input id="fileImport" type="file" accept="application/json" hidden />
+        <span>Importar</span>
+      </label>
+    </div>
+  </header>
+
+  <main id="board">
+    <!-- Capa para las líneas (conexiones) -->
+    <svg id="edges" aria-hidden="true"></svg>
+
+    <!-- Columnas por semestre -->
+    <section id="semesters" aria-label="Semestres"></section>
+  </main>
+
+  <footer class="legend">
+    <div><span class="dot available"></span>Disponible</div>
+    <div><span class="dot done"></span>Aprobado</div>
+    <div><span class="dot locked"></span>Bloqueado (faltan prerrequisitos)</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
